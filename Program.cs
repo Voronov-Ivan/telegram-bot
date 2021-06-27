@@ -22,7 +22,7 @@ namespace UrlSendBot
             var msg = e.Message;
             if (msg.Text != null)
             {
-                Console.WriteLine(msg.Text);
+                client.SendTextMessageAsync(msg.Chat.Id, $"You send {msg.Text}");
             }
         }
     }
